@@ -1,5 +1,5 @@
 import fastify from 'fastify'
-import knex from 'knex'
+import { knex } from './database'
 
 const app = fastify()
 
@@ -8,6 +8,10 @@ app.get('/hello', async () => {
 
   return tables
 })
+
+// app.get('/hello', () => {
+//   return 'Hello World'
+// })
 
 app
   .listen({
